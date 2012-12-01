@@ -40,6 +40,15 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="XNACS1Lib_PC">
+      <HintPath>..\..\..\..\..\..\School Archive\CSS 490\Game components\2011.4.18.Lib\XNACS1Lib_PC.dll</HintPath>
+    </Reference>
+    <Reference Include="XNACS1Lib_WP7">
+      <HintPath>..\..\..\..\..\..\School Archive\CSS 490\Game components\2011.4.18.Lib\XNACS1Lib_WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="XNACS1Lib_XBOX">
+      <HintPath>..\..\..\..\..\..\School Archive\CSS 490\Game components\2011.4.18.Lib\XNACS1Lib_XBOX.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Fonts\Arial.spritefont">
@@ -288,13 +297,6 @@
   <ItemGroup>
     <Compile Include="Resources\Textures\old_map.png">
       <Name>old_map</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Resources\Textures\clear_box.png">
-      <Name>clear_box</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

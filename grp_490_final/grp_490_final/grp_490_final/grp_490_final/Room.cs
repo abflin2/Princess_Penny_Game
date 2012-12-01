@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -13,9 +14,9 @@ using XNACS1Lib;
 
 namespace grp_490_final {
 	class Room {
-		Knight knight;
-		float knightX;
-		float knightY;
+		//Knight knight;
+		//float knightX;
+		//float knightY;
 		bool triggerPressed;
 		int numDoors;
 		int numEnemies;
@@ -34,7 +35,7 @@ namespace grp_490_final {
 		Key key;
 		Vector2 dropPos;
 		XNACS1Rectangle backGround;
-		bool allDone;
+		//bool allDone;
 		Wizard badGuy;
 		bool hasWon;
 		bool isAlive;
@@ -42,6 +43,11 @@ namespace grp_490_final {
 		int numGuards;
 		public bool heroCaught;
 
+		public Room(XmlNode xml)
+		{
+			//Todo: Write constructor that takes in xmlnode and creates room.
+			//x = Convert.ToInt32(xml.ChildNodes.
+		}
 		public Room(ref StreamReader m, int xCoord, int yCoord) {
 
 			x = xCoord;
@@ -176,12 +182,12 @@ namespace grp_490_final {
 			if (dropPos.X > -1)
 				reduceActiveEnemies();
 
-			allDone = true;
-			for (int i = 0; i < myEnemies.Length; i++) {
-				if (!myEnemies[i].isBunny())
-					allDone = false;
+			//allDone = true;
+			//for (int i = 0; i < myEnemies.Length; i++) {
+			//    if (!myEnemies[i].isBunny())
+			//        allDone = false;
 
-			}
+			//}
 
 			if (hasStairs == 1 && badGuy != null) {
 				walls.updateWizardStats(badGuy);

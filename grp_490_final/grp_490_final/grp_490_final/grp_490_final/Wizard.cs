@@ -12,8 +12,8 @@ namespace grp_490_final {
 		int coolDown;
 		int shieldCoolDown;
 		bool shielded;
-		string leftTex;  //left texture
-		string rightTex;
+		//string leftTex;  //left texture
+		//string rightTex;
 		enum wizardStatus { isAlive, isDead };
 		wizardStatus current;
 		public bool heroHit;

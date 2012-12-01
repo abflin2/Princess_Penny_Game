@@ -24,7 +24,7 @@ namespace grp_490_final {
 		}
 
 		public List<shot> list = new List<shot>();
-		int hits = 0;
+		//int hits = 0;
 		int level;
 
 		public void UpdateWand(int level) { this.level = level; }

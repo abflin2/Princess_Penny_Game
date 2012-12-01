@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -33,17 +34,23 @@ namespace grp_490_final {
 		int ticker;
 
 		public bool paused;
-		public Level(ref StreamReader s) {
+		public Level(ref StreamReader s, XmlDocument xml) {
 			paused = false;
 			ticker = 80;
 
+			var xlevelnum = xml.GetElementsByTagName("LevelNum");
+			int xmlLvl = Convert.ToInt32(xlevelnum.Item(0).Value);
+
+			XmlNodeList roomXMLs = xml.GetElementsByTagName("Room");
+			Room room1 = new Room(roomXMLs.Item(0));
 			if ((line = s.ReadLine()) != null)
 				levelNum = Convert.ToInt32(line);
 
 			rooms = new Room[cellNum, cellNum];
-             roomMap = new roomState[cellNum, cellNum];
+            roomMap = new roomState[cellNum, cellNum];
 			int numRooms = Convert.ToInt32(s.ReadLine());
 			initialRoom = new Vector2(Convert.ToInt64(s.ReadLine()), Convert.ToInt64(s.ReadLine())); 
+
 
 			for (int i = 0; i < cellNum; i++) {
 				for (int j = 0; j < cellNum; j++)
